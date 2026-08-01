@@ -30,7 +30,8 @@ if ingredients_list:
   
     st.write(my_insert_stmt)
     smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
-    st.text(smoothiefroot_response.json())
+    #st.text(smoothiefroot_response.json())
+    st_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width = True)
     # Write directly to the app
     st.title(f":cup_with_straw: Custimize your Smoothie :cup_with_straw:")
     st.write(
