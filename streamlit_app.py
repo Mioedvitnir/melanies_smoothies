@@ -29,7 +29,7 @@ if ingredients_list:
                     values ('""" + ingredients_string + """','"""+name_on_order+"""')"""
   
     st.write(my_insert_stmt)
-    smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
+    smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
     st.text(smoothiefroot_response)
     # Write directly to the app
     st.title(f":cup_with_straw: Custimize your Smoothie :cup_with_straw:")
